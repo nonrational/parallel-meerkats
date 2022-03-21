@@ -11,7 +11,7 @@ import "@openzeppelin/contracts/utils/Strings.sol";
 contract ParallelMeerkatManorHouse is ERC721, ERC721URIStorage, ERC721Enumerable, Ownable {
     event TraitUpdated(uint256 indexed tokenId, string trait, bool value);
 
-    uint256 public maxGlobalMeerkats = 20;
+    // uint256 public maxGlobalMeerkats = 20;
 
     // every time we mint, increment the last meerkat id
     using Counters for Counters.Counter;
@@ -45,11 +45,6 @@ contract ParallelMeerkatManorHouse is ERC721, ERC721URIStorage, ERC721Enumerable
         meta._mintedAt = block.timestamp;
 
         return tokId;
-    }
-
-    function unexpired(uint256 tokenId) public view virtual returns (bool) {
-        require(_exists(tokenId), "Request for nonexistent token");
-        return mintedAt(tokenId) >= block.timestamp - 90 days;
     }
 
     function mintedAt(uint256 tokenId) public view virtual returns (uint256) {
