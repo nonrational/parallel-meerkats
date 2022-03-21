@@ -1,0 +1,24 @@
+{
+  "bracketSameLine": true,
+  "jsxSingleQuote": true,
+  "printWidth": 180,
+  "semi": false,
+  "singleQuote": true,
+  "plugins": ["prettier-plugin-solidity"],
+  "overrides": [
+    {
+      "files": ["*.yml", "*.yaml"],
+      "options": {
+        "singleQuote": false
+      }
+    },
+    {
+      "files": ["*.sol"],
+      "options": {
+        "singleQuote": false,
+        "semi": true,
+        "explicitTypes": "always"
+      }
+    }
+  ]
+}
