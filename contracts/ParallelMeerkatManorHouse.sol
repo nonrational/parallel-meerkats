@@ -7,11 +7,12 @@ import "@openzeppelin/contracts/token/ERC721/extensions/ERC721Enumerable.sol";
 import "@openzeppelin/contracts/utils/Counters.sol";
 import "@openzeppelin/contracts/access/Ownable.sol";
 import "@openzeppelin/contracts/utils/Strings.sol";
+import "erc721a/contracts/ERC721A.sol";
 
 contract ParallelMeerkatManorHouse is ERC721, ERC721URIStorage, ERC721Enumerable, Ownable {
     event TraitUpdated(uint256 indexed tokenId, string trait, bool value);
 
-    // uint256 public maxGlobalMeerkats = 20;
+    uint256 public maxGlobalMeerkats = 555;
 
     // every time we mint, increment the last meerkat id
     using Counters for Counters.Counter;
@@ -24,11 +25,11 @@ contract ParallelMeerkatManorHouse is ERC721, ERC721URIStorage, ERC721Enumerable
     mapping(uint256 => Metadata) private _metas;
 
     // solhint-disable-next-line no-empty-blocks
-    constructor() ERC721("ParallelMeerkatManorHouse", "PMMH") {}
+    // constructor() ERC721("ParallelMeerkatManorHouse", "PMMH") {}
 
-    // constructor(uint256 maxSupply) ERC721("ParallelMeerkatManorHouse", "PMMH") {
-    //     maxGlobalMeerkats = maxSupply;
-    // }
+    constructor(uint256 maxSupply) ERC721("ParallelMeerkatManorHouse", "PMMH") {
+        maxGlobalMeerkats = maxSupply;
+    }
 
     /**
      *
