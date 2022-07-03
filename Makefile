@@ -1,3 +1,12 @@
+local-node:
+	pnpm exec hardhat node
+
+local-deploy:
+	pnpm exec hardhat run --network localhost scripts/deploy.js
+
+local-run:
+	source .env && pnpm exec hardhat run --network localhost scripts/deployAndMint.js
+
 deploy-testnet:
 	source .env && pnpm exec hardhat run --network goerli scripts/deploy.js
 
