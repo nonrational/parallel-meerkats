@@ -10,11 +10,7 @@ import "@openzeppelin/contracts/utils/Strings.sol";
 import "erc721a/contracts/ERC721A.sol";
 
 contract ParallelMeerkatManorHouse is ERC721A, Ownable {
-    uint256 public maxGlobalMeerkats = 555;
-
-    constructor(uint256 maxSupply) ERC721A("ParallelMeerkatManorHouse", "PMMH") {
-        maxGlobalMeerkats = maxSupply;
-    }
+    constructor() ERC721A("ParallelMeerkatManorHouse", "PMMH") {}
 
     function mint(uint256 quantity) external payable onlyOwner {
         _mint(msg.sender, quantity);
@@ -28,6 +24,6 @@ contract ParallelMeerkatManorHouse is ERC721A, Ownable {
         if (!_exists(tokenId)) revert URIQueryForNonexistentToken();
 
         string memory baseURI = _baseURI();
-        return bytes(baseURI).length != 0 ? string(abi.encodePacked(baseURI, _toString(tokenId), '.json')) : '';
+        return bytes(baseURI).length != 0 ? string(abi.encodePacked(baseURI, _toString(tokenId), ".json")) : "";
     }
 }

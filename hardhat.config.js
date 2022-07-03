@@ -4,6 +4,7 @@ require('@nomiclabs/hardhat-etherscan')
 require('@nomiclabs/hardhat-waffle')
 require('hardhat-gas-reporter')
 require('solidity-coverage')
+require('hardhat-ethernal')
 
 // This is a sample Hardhat task. To learn how to create your own go to
 // https://hardhat.org/guides/create-task.html
@@ -48,5 +49,10 @@ module.exports = {
     apiKey: {
       rinkeby: process.env.ETHERSCAN_API_KEY || 'NOT VALID'
     }
-  }
+  },
+  ethernal: {
+    uploadAst: true,
+    email: process.env.ETHERNAL_EMAIL,
+    password: process.env.ETHERNAL_PASSWORD,
+}
 }

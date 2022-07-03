@@ -4,10 +4,15 @@ async function main() {
   // await hre.run('compile');
 
   const ParallelMeerkatManorHouse = await hre.ethers.getContractFactory('ParallelMeerkatManorHouse')
-  const factory = await ParallelMeerkatManorHouse.deploy(10)
+  const factory = await ParallelMeerkatManorHouse.deploy()
   await factory.deployed()
 
   console.log('ParallelMeerkatManorHouse deployed to:', factory.address)
+
+  await hre.ethernal.push({
+    name: 'ParallelMeerkatManorHouse',
+    address: factory.address
+  });
 
   const contract = await ParallelMeerkatManorHouse.attach(factory.address)
   const result = await contract.mint(3)
