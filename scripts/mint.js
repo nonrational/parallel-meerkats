@@ -15,12 +15,11 @@ async function main() {
 
   // We get the contract to deploy
   const ParallelMeerkatManorHouse = await hre.ethers.getContractFactory('ParallelMeerkatManorHouse')
-  // parallel meerkats (aka parallel merkles)
-  // the address reported by deploy()
-  const pmmh = await ParallelMeerkatManorHouse.attach('0xEBe73A43Fd83A685B27893e444FC3eF3dE7c290D')
+
+  const pmmh = await ParallelMeerkatManorHouse.attach('0x9fe46736679d2d9a65f0992f2272de9f3c7fa6e0')
 
   // mint a meerkat for myself
-  await pmmh.mintMeerkat('0xC40323Eb68Cd96A0aCbF2b402EEE9Ab5Fe198488')
+  await pmmh.mint(3)
 }
 
 // We recommend this pattern to be able to use async/await everywhere

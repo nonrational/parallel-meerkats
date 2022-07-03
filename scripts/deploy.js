@@ -15,7 +15,7 @@ async function main() {
 
   // We get the contract to deploy
   const ParallelMeerkatManorHouse = await hre.ethers.getContractFactory('ParallelMeerkatManorHouse')
-  const pmmh = await ParallelMeerkatManorHouse.deploy()
+  const pmmh = await ParallelMeerkatManorHouse.deploy(100)
   await pmmh.deployed()
 
   console.log('ParallelMeerkatManorHouse deployed to:', pmmh.address)
