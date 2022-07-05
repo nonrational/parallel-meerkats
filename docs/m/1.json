@@ -1,5 +1,11 @@
 {
-    "name": "Parallel Meerkat #1",
-    "description": "Mr. Merkles",
-    "image": "https://i.imgur.com/7NUzlvl.png"
+    "name": "Mr. Merkles",
+    "description": "Parallel Meerkat #1<br/><br/>Mr. Merkles is a great co-worker.",
+    "image": "https://parallelmeerkats.com/images/1.jpg",
+    "external_url": "https://parallelmeerkats.com/meerkats/1",
+    "attributes": [
+        {"display_type": "date",
+            "trait_type": "birthday",
+            "value": 1647906531}
+    ]
 }
