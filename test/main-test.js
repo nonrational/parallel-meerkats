@@ -8,29 +8,23 @@ const deployContract = async function () {
   return pmmh
 }
 
-describe('mintMeerkat', function () {
-  it('should work', async function () {
+describe('mintMany', function () {
+  it('should allow minting multiple tokens', async function () {
     const pmmh = await deployContract()
 
-    // mint a token
-    const [owner, reciever] = await ethers.getSigners()
-    const mintTx = await pmmh.mintMeerkat(reciever.address)
+    // mint 3 tokens in a single transaction
+    const [owner] = await ethers.getSigners()
+    const mintTx = await pmmh.mintMany(3)
     await mintTx.wait()
 
-    // owner should have no meerkats
-    expect(await pmmh.balanceOf(owner.address)).to.equal(0)
+    // owner should have two meerkats
+    expect(await pmmh.balanceOf(owner.address)).to.equal(3)
 
-    // reciver should have one meerkats
-    expect(await pmmh.balanceOf(reciever.address)).to.equal(1)
+    // fetch the first tokenId of the receiver
+    const [tok1, tok2, tok3] = await pmmh.tokensOfOwner(owner.address)
 
-    // fetch the first tokId of the receiver
-    const tokenId = await pmmh.tokenOfOwnerByIndex(reciever.address, 0)
-    const now = Math.round(new Date().getTime() / 1000)
-
-    // check that we minted this token recently
-    expect(await pmmh.mintedAt(tokenId)).to.be.within(now - 15, now)
-
-    // verify that the metadata uri is expected
-    expect(await pmmh.tokenURI(tokenId)).to.equal('https://parallelmeerkats.com/m/1.json')
+    expect(await pmmh.tokenURI(tok1)).to.equal(`https://parallelmeerkats.com/data/0.json`)
+    expect(await pmmh.tokenURI(tok2)).to.equal(`https://parallelmeerkats.com/data/1.json`)
+    expect(await pmmh.tokenURI(tok3)).to.equal(`https://parallelmeerkats.com/data/2.json`)
   })
 })

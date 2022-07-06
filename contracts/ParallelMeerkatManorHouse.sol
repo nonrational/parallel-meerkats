@@ -1,23 +1,23 @@
 // SPDX-License-Identifier: MIT
-pragma solidity ^0.8.13;
+pragma solidity ^0.8.9;
 
-// import "@openzeppelin/contracts/token/ERC721/ERC721.sol";
-import "@openzeppelin/contracts/token/ERC721/extensions/ERC721URIStorage.sol";
-import "@openzeppelin/contracts/token/ERC721/extensions/ERC721Enumerable.sol";
-import "@openzeppelin/contracts/utils/Counters.sol";
 import "@openzeppelin/contracts/access/Ownable.sol";
-import "@openzeppelin/contracts/utils/Strings.sol";
+import "erc721a/contracts/extensions/ERC721AQueryable.sol";
 import "erc721a/contracts/ERC721A.sol";
 
-contract ParallelMeerkatManorHouse is ERC721A, Ownable {
+contract ParallelMeerkatManorHouse is ERC721AQueryable, Ownable {
     constructor() ERC721A("ParallelMeerkatManorHouse", "PMMH") {}
 
-    function mint(uint256 quantity) external payable onlyOwner {
+    function mintMany(uint256 quantity) external payable onlyOwner {
         _mint(msg.sender, quantity);
     }
 
+    function mintTo(address receiver) external payable onlyOwner {
+        _mint(receiver, 1);
+    }
+
     function _baseURI() internal view virtual override(ERC721A) returns (string memory) {
-        return "https://parallelmeerkats.com/m/";
+        return "https://parallelmeerkats.com/data/";
     }
 
     function tokenURI(uint256 tokenId) public view virtual override(ERC721A) returns (string memory) {

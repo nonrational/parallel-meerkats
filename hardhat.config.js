@@ -27,7 +27,7 @@ task('accounts', 'Prints the list of accounts', async (taskArgs, hre) => {
  */
 module.exports = {
   solidity: {
-    version: '0.8.13',
+    version: '0.8.9',
     settings: {
       optimizer: {
         enabled: process.env.OPTIMIZE === '1',
@@ -43,16 +43,16 @@ module.exports = {
     goerli: {
       url: process.env.GOERLI_URL || '',
       accounts: process.env.PRIVATE_KEY !== undefined ? [process.env.PRIVATE_KEY] : [],
-    }
+    },
   },
   etherscan: {
     apiKey: {
-      rinkeby: process.env.ETHERSCAN_API_KEY || 'NOT VALID'
-    }
+      rinkeby: process.env.ETHERSCAN_API_KEY || 'NOT VALID',
+    },
   },
   ethernal: {
     uploadAst: true,
     email: process.env.ETHERNAL_EMAIL,
     password: process.env.ETHERNAL_PASSWORD,
-}
+  },
 }
