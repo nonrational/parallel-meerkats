@@ -1,3 +1,7 @@
+clean:
+	rm -rf artifacts/*
+	rm -rf cache/*
+
 local-node:
 	pnpm exec hardhat node
 
