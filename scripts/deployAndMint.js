@@ -11,11 +11,11 @@ async function main() {
 
   await hre.ethernal.push({
     name: 'ParallelMeerkatManorHouse',
-    address: factory.address
-  });
+    address: factory.address,
+  })
 
   const contract = await ParallelMeerkatManorHouse.attach(factory.address)
-  const result = await contract.mint(3)
+  const result = await contract.mintMany(50)
 
   console.log('ParallelMeerkatManorHouse.mint result:', result)
 }

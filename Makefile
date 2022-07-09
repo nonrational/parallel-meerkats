@@ -3,7 +3,7 @@ clean:
 	rm -rf cache/*
 
 local-node:
-	pnpm exec hardhat node
+	source .local.env && pnpm exec hardhat node
 
 local-run:
 	source .local.env && pnpm exec hardhat run --network localhost scripts/deployAndMint.js
