@@ -12,10 +12,6 @@ contract ParallelMeerkatManorHouse is ERC721AQueryable, Ownable {
         _mint(msg.sender, quantity);
     }
 
-    function mintTo(address receiver) external payable onlyOwner {
-        _mint(receiver, 1);
-    }
-
     function _baseURI() internal view virtual override(ERC721A) returns (string memory) {
         return "https://parallelmeerkats.com/data/";
     }
