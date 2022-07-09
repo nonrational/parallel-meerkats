@@ -15,7 +15,7 @@ async function main() {
   })
 
   const contract = await ParallelMeerkatManorHouse.attach(factory.address)
-  const result = await contract.mintMany(50)
+  const result = await contract.adminMint(101)
 
   console.log('ParallelMeerkatManorHouse.mint result:', result)
 }

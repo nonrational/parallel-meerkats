@@ -1,28 +1,29 @@
-// We require the Hardhat Runtime Environment explicitly here. This is optional
-// but useful for running the script in a standalone fashion through `node <script>`.
-//
-// When running the script with `npx hardhat run <script>` you'll find the Hardhat
-// Runtime Environment's members available in the global scope.
-const hre = require('hardhat')
+// scripts/deploy.js
+const { ethers, upgrades } = require('hardhat')
+const fs = require('fs')
 
 async function main() {
-  // Hardhat always runs the compile task when running scripts with its command
-  // line interface.
-  //
-  // If this script is run directly using `node` you may want to call compile
-  // manually to make sure everything is compiled
-  // await hre.run('compile');
+  const ParallelMeerkatManorHouse = await ethers.getContractFactory('ParallelMeerkatManorHouse')
+  console.log('Deploying...')
+  const pmm = await upgrades.deployProxy(ParallelMeerkatManorHouse, [], { initializer: 'initialize' })
+  await pmm.deployed()
 
-  // We get the contract to deploy
-  const ParallelMeerkatManorHouse = await hre.ethers.getContractFactory('ParallelMeerkatManorHouse')
-  const pmmh = await ParallelMeerkatManorHouse.deploy()
-  await pmmh.deployed()
+  const addresses = {
+    proxy: pmm.address,
+    admin: await upgrades.erc1967.getAdminAddress(pmm.address),
+    implementation: await upgrades.erc1967.getImplementationAddress(pmm.address),
+  }
+  console.log('Addresses:', addresses)
 
-  console.log('ParallelMeerkatManorHouse deployed to:', pmmh.address)
+  try {
+    await run('verify', { address: addresses.implementation })
+  } catch (e) {
+    console.error('verification failed:', e)
+  }
+
+  fs.writeFileSync('deploy-addresses.json', JSON.stringify(addresses))
 }
 
-// We recommend this pattern to be able to use async/await everywhere
-// and properly handle errors.
 main().catch((error) => {
   console.error(error)
   process.exitCode = 1

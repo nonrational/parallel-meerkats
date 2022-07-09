@@ -1,20 +1,15 @@
 const { expect } = require('chai')
-const { ethers } = require('hardhat')
+const { ethers, upgrades } = require('hardhat')
 
-const deployContract = async function () {
-  const ParallelMeerkatManorHouse = await ethers.getContractFactory('ParallelMeerkatManorHouse')
-  const pmmh = await ParallelMeerkatManorHouse.deploy()
-  await pmmh.deployed()
-  return pmmh
-}
-
-describe('mintMany', function () {
+describe('adminMint', function () {
   it('should allow minting multiple tokens', async function () {
-    const pmmh = await deployContract()
+    const ParallelMeerkatManorHouse = await ethers.getContractFactory('ParallelMeerkatManorHouse')
+    const proxy = await upgrades.deployProxy(ParallelMeerkatManorHouse, [], { initializer: 'initialize' })
+    const pmmh = await proxy.deployed()
 
     // mint 3 tokens in a single transaction
     const [owner] = await ethers.getSigners()
-    const mintTx = await pmmh.mintMany(3)
+    const mintTx = await pmmh.adminMint(3)
     await mintTx.wait()
 
     // owner should have two meerkats
