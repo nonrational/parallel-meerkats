@@ -2,9 +2,12 @@ require('dotenv').config()
 
 require('@nomiclabs/hardhat-etherscan')
 require('@nomiclabs/hardhat-waffle')
+require('@openzeppelin/hardhat-upgrades')
 require('hardhat-gas-reporter')
-require('solidity-coverage')
-require('hardhat-ethernal')
+
+if (process.env.ETHERNAL_EMAIL !== undefined) {
+  require('hardhat-ethernal')
+}
 
 // This is a sample Hardhat task. To learn how to create your own go to
 // https://hardhat.org/guides/create-task.html
