@@ -1,5 +1,5 @@
 // scripts/deploy.js
-const { ethers, upgrades } = require('hardhat')
+const { ethers, upgrades, network } = require('hardhat')
 const fs = require('fs')
 
 async function main() {
@@ -16,9 +16,10 @@ async function main() {
   console.log('Addresses:', addresses)
 
   try {
+    console.log('chain id', network.config.chainId)
     await run('verify', { address: addresses.implementation })
   } catch (e) {
-    console.error('verification failed:', e)
+    console.warn('verification failed:', e.message)
   }
 
   fs.writeFileSync('deploy-addresses.json', JSON.stringify(addresses))
