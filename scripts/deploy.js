@@ -1,8 +1,12 @@
 // scripts/deploy.js
-const { ethers, upgrades, network } = require('hardhat')
+const { ethers, upgrades } = require('hardhat')
 const fs = require('fs')
 
 async function main() {
+  if (!process.env.DEPLOY_ADDRESSES_PATH) {
+    throw 'Missing DEPLOY_ADDRESSES_PATH'
+  }
+
   const ParallelMeerkatManorHouse = await ethers.getContractFactory('ParallelMeerkatManorHouse')
   console.log('Deploying...')
   const pmm = await upgrades.deployProxy(ParallelMeerkatManorHouse, [], { initializer: 'initialize' })
@@ -16,13 +20,12 @@ async function main() {
   console.log('Addresses:', addresses)
 
   try {
-    console.log('chain id', network.config.chainId)
     await run('verify', { address: addresses.implementation })
   } catch (e) {
     console.warn('verification failed:', e.message)
   }
 
-  fs.writeFileSync('deploy-addresses.json', JSON.stringify(addresses))
+  fs.writeFileSync(process.env.DEPLOY_ADDRESSES_PATH, JSON.stringify(addresses))
 }
 
 main().catch((error) => {

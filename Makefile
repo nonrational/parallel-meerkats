@@ -11,11 +11,11 @@ clean:
 local-node:
 	source .local.env && pnpm exec hardhat node
 
-local-run:
-	source .local.env && pnpm exec hardhat run --network localhost scripts/deployAndMint.js
-
 local-deploy:
 	source .local.env && pnpm exec hardhat run --network localhost scripts/deploy.js
+
+local-upgrade:
+	source .local.env && pnpm exec hardhat run --network localhost scripts/upgrade.js
 
 goerli-deploy:
 	source .goerli.env && pnpm exec hardhat run --network goerli scripts/deploy.js
