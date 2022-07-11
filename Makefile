@@ -17,6 +17,9 @@ local-deploy:
 local-upgrade:
 	source .local.env && pnpm exec hardhat run --network localhost scripts/upgrade.js
 
+local-mint:
+	source .local.env && pnpm exec hardhat run --network localhost scripts/mint.js
+
 goerli-deploy:
 	source .goerli.env && pnpm exec hardhat run --network goerli scripts/deploy.js
 

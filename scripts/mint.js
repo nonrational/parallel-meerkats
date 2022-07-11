@@ -4,6 +4,7 @@
 // When running the script with `npx hardhat run <script>` you'll find the Hardhat
 // Runtime Environment's members available in the global scope.
 const hre = require('hardhat')
+const fs = require('fs')
 
 async function main() {
   // Hardhat always runs the compile task when running scripts with its command
@@ -13,13 +14,17 @@ async function main() {
   // manually to make sure everything is compiled
   // await hre.run('compile');
 
-  // We get the contract to deploy
+  if (!fs.existsSync(process.env.DEPLOY_ADDRESSES_PATH)) {
+    throw `Missing ${process.env.DEPLOY_ADDRESSES_PATH}`
+  }
+
   const ParallelMeerkatManorHouse = await hre.ethers.getContractFactory('ParallelMeerkatManorHouse')
 
-  const pmmh = await ParallelMeerkatManorHouse.attach('0x9fe46736679d2d9a65f0992f2272de9f3c7fa6e0')
+  const deployment = JSON.parse(fs.readFileSync(process.env.DEPLOY_ADDRESSES_PATH))
+  const contract = ParallelMeerkatManorHouse.attach(deployment.proxy)
 
-  // mint a meerkat for myself
-  await pmmh.mint(3)
+  const result = await contract.adminMint(50)
+  console.log(result)
 }
 
 // We recommend this pattern to be able to use async/await everywhere
