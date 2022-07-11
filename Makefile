@@ -26,8 +26,17 @@ goerli-deploy:
 goerli-mint:
 	source .goerli.env && pnpm exec hardhat run --network goerli scripts/mint.js
 
-goerli-verify:
-	source .goerli.env && npx hardhat verify --network goerli $$GOERLI_ADDRESS
+rinkeby-deploy:
+	source .rinkeby.env && pnpm exec hardhat run --network rinkeby scripts/deploy.js
+
+rinkeby-upgrade:
+	source .rinkeby.env && pnpm exec hardhat run --network rinkeby scripts/upgrade.js
+
+rinkeby-mint:
+	source .rinkeby.env && pnpm exec hardhat run --network rinkeby scripts/mint.js
 
 
-.PHONY: test compile clean local-node local-run local-deploy goerli-deploy goerli-mint goerli-verify
+
+# echo ".PHONY: $(egrep -o '^([a-z-]*):' Makefile | tr -d ':' | xargs echo)"
+.PHONY: test compile clean local-node local-deploy local-upgrade local-mint goerli-deploy goerli-mint goerli-verify
+
