@@ -6,6 +6,7 @@ require('@openzeppelin/hardhat-upgrades')
 require('hardhat-gas-reporter')
 
 if (process.env.ETHERNAL_EMAIL !== undefined) {
+  console.log('Loading Ethernal...')
   require('hardhat-ethernal')
 }
 
