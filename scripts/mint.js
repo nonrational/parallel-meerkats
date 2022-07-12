@@ -23,7 +23,7 @@ async function main() {
   const deployment = JSON.parse(fs.readFileSync(process.env.DEPLOY_ADDRESSES_PATH))
   const contract = ParallelMeerkatManorHouse.attach(deployment.proxy)
 
-  const result = await contract.adminMint(50)
+  const result = await contract.ownerMint(50)
   console.log(result)
 }
 

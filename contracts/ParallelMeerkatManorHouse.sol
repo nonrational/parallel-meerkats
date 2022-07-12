@@ -14,8 +14,17 @@ contract ParallelMeerkatManorHouse is ERC721AQueryableUpgradeable, OwnableUpgrad
         __Ownable_init();
     }
 
-    function adminMint(uint256 quantity) external payable onlyOwner {
+    function ownerMint(uint256 quantity) external onlyOwner {
         _mint(msg.sender, quantity);
+    }
+
+    function ownerGift(address to, uint256 tokenId) external onlyOwner {
+        super.transferFrom(msg.sender, to, tokenId);
+    }
+
+    function transferFrom(address from,  address to,  uint256 tokenId) public virtual override {
+        revert("MISSING KYC");
+        super.transferFrom(from, to, tokenId);
     }
 
     function _baseURI() internal view virtual override(ERC721AUpgradeable) returns (string memory) {
