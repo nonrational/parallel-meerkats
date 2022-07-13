@@ -8,6 +8,13 @@ clean:
 	rm -rf artifacts/*
 	rm -rf cache/*
 
+#  _                 _
+# | | ___   ___ __ _| |
+# | |/ _ \ / __/ _` | |
+# | | (_) | (_| (_| | |
+# |_|\___/ \___\__,_|_|
+#
+
 local-node:
 	source .local.env && pnpm exec hardhat node
 
@@ -20,6 +27,12 @@ local-upgrade:
 local-mint:
 	source .local.env && pnpm exec hardhat run --network localhost scripts/mint.js
 
+#                        _ _
+#   __ _  ___   ___ _ __| (_)
+#  / _` |/ _ \ / _ \ '__| | |
+# | (_| | (_) |  __/ |  | | |
+#  \__, |\___/ \___|_|  |_|_|
+#  |___/
 
 goerli-deploy:
 	source .goerli.env && pnpm exec hardhat run --network goerli scripts/deploy.js
@@ -33,6 +46,12 @@ goerli-verify:
 goerli-mint:
 	source .goerli.env && pnpm exec hardhat run --network goerli scripts/mint.js
 
+#       _       _        _
+#  _ __(_)_ __ | | _____| |__  _   _
+# | '__| | '_ \| |/ / _ \ '_ \| | | |
+# | |  | | | | |   <  __/ |_) | |_| |
+# |_|  |_|_| |_|_|\_\___|_.__/ \__, |
+#                              |___/
 
 rinkeby-deploy:
 	source .rinkeby.env && pnpm exec hardhat run --network rinkeby scripts/deploy.js
