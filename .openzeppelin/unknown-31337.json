@@ -2,24 +2,24 @@
   "manifestVersion": "3.2",
   "admin": {
     "address": "0xe7f1725E7734CE288F8367e1Bb143E90bb3F0512",
-    "txHash": "0x660229b7e871918b4ce30f46fcbe5ba6545bc4af674e708800c36b3c837c402a"
+    "txHash": "0x7e79e274a6adb2e28a29adfa5e2edf1cc07a2d497b73036a2a74b34c73ea6a47"
   },
   "proxies": [
     {
       "address": "0x9fE46736679d2D9a65F0992F2272dE9f3c7fa6e0",
-      "txHash": "0x9a778c63fac697754336f507efb551187483a367f91c9710eda22d796d5c661a",
+      "txHash": "0xf0318884c382b73c16dbb8303c8c8450f17aa67d352eee4cb3944e01dc954c9c",
       "kind": "transparent"
     },
     {
       "address": "0xDc64a140Aa3E981100a9becA4E685f962f0cF6C9",
-      "txHash": "0x6065772ebbe373a6504801b62c90f457ee6c56ff8a27c12c0c04dc716d94bc48",
+      "txHash": "0xd7e6e10aa682ba9b94354064a688c535898bdcacc6df04f1b8c268189ef7ee29",
       "kind": "transparent"
     }
   ],
   "impls": {
-    "808918e36adeef039332cc6d7536be511b84995947971290164d1ab024bcb8ec": {
+    "37859cc145f3f6da83e2aa10ef4a953c6aad08e712b54311b12415a2b9c61335": {
       "address": "0x5FbDB2315678afecb367f032d93F642f64180aa3",
-      "txHash": "0x41387d93844582e1517b4c3778c9d7bc3b2e7ec0538cf7e791cca36fbc15b5aa",
+      "txHash": "0x0c9fbf31b14646f4e50fc6eae0a38d3a062cc2b2da500e624e48cb9407899614",
       "layout": {
         "storage": [
           {
@@ -62,6 +62,14 @@
             "type": "t_array(t_uint256)49_storage",
             "contract": "OwnableUpgradeable",
             "src": "@openzeppelin/contracts-upgradeable/access/OwnableUpgradeable.sol:94"
+          },
+          {
+            "label": "PID_CONTRACT",
+            "offset": 0,
+            "slot": "101",
+            "type": "t_address",
+            "contract": "ParallelMeerkatManorHouse",
+            "src": "contracts/ParallelMeerkatManorHouse.sol:10"
           }
         ],
         "types": {

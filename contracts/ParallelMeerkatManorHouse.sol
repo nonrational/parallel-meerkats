@@ -7,12 +7,18 @@ import "erc721a-upgradeable/contracts/extensions/ERC721AQueryableUpgradeable.sol
 import "erc721a-upgradeable/contracts/ERC721AUpgradeable.sol";
 
 contract ParallelMeerkatManorHouse is ERC721AQueryableUpgradeable, OwnableUpgradeable {
+    address PID_CONTRACT;
+
     // Take note of the initializer modifiers.
     // - `initializerERC721A` for `ERC721AUpgradeable`.
     // - `initializer` for OpenZeppelin's `OwnableUpgradeable`.
     function initialize() public initializerERC721A initializer {
         __ERC721A_init("ParallelMeerkatManorHouse", "PMMH");
         __Ownable_init();
+
+        // rinkeby: 0x0F2255E8aD232c5740879e3B495EA858D93C3016
+        // mainnet: 0x9ec6232742b6068ce733645AF16BA277Fa412B0A
+        PID_CONTRACT = 0x0F2255E8aD232c5740879e3B495EA858D93C3016;
     }
 
     function ownerMint(uint256 quantity) external onlyOwner {
@@ -20,11 +26,13 @@ contract ParallelMeerkatManorHouse is ERC721AQueryableUpgradeable, OwnableUpgrad
     }
 
     function ownerGift(address to, uint256 tokenId) external onlyOwner {
+        // Allow initial, gratis transfer to any address.
         super.transferFrom(msg.sender, to, tokenId);
     }
 
     function transferFrom(address from,  address to,  uint256 tokenId) public virtual override {
-        if (!hasAnySanctionsSafeIdentityToken(from) || !hasAnySanctionsSafeIdentityToken(to)) revert("Transfer forbidden");
+        // Forbid "normal" transfer to an address not known to be sanctions safe.
+        if (!hasAnySanctionsSafeIdentityToken(to)) revert("Transfer forbidden");
 
         super.transferFrom(from, to, tokenId);
     }
@@ -40,11 +48,8 @@ contract ParallelMeerkatManorHouse is ERC721AQueryableUpgradeable, OwnableUpgrad
         return bytes(baseURI).length != 0 ? string(abi.encodePacked(baseURI, _toString(tokenId), ".json")) : "";
     }
 
-    address PID_CONTRACT_RINKEBY = "0x0F2255E8aD232c5740879e3B495EA858D93C3016";
-    // address PID_CONTRACT_MAINNET = "0x9ec6232742b6068ce733645AF16BA277Fa412B0A";
-
-    function hasAnySanctionsSafeIdentityToken(address subject) internal returns (bool) {
-        IParallelID pid = IParallelID(PID_CONTRACT_RINKEBY);
+    function hasAnySanctionsSafeIdentityToken(address subject) internal view returns (bool) {
+        IParallelID pid = IParallelID(PID_CONTRACT);
 
         for (uint256 i = 0; i < pid.balanceOf(subject); i++) {
             uint256 tokenId = pid.tokenOfOwnerByIndex(subject, i);
