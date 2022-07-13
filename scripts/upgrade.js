@@ -1,4 +1,4 @@
-// scripts/deploy.js
+// scripts/upgrade.js
 const { ethers, upgrades } = require('hardhat')
 const fs = require('fs')
 
