@@ -7,6 +7,7 @@ specifiers:
   '@openzeppelin/contracts': ^4.7.0
   '@openzeppelin/contracts-upgradeable': ^4.7.0
   '@openzeppelin/hardhat-upgrades': ^1.19.0
+  '@parallelmarkets/token': ^0.0.2
   chai: ^4.3.6
   dotenv: ^16.0.1
   erc721a-upgradeable: ^4.1.0
@@ -28,6 +29,7 @@ devDependencies:
   '@openzeppelin/contracts': 4.7.0
   '@openzeppelin/contracts-upgradeable': 4.7.0
   '@openzeppelin/hardhat-upgrades': 1.19.0_oipwi4u5qozcenkpuwlqopgmha
+  '@parallelmarkets/token': 0.0.2
   chai: 4.3.6
   dotenv: 16.0.1
   erc721a-upgradeable: 4.1.0
@@ -996,6 +998,10 @@ packages:
       solidity-ast: 0.4.35
     transitivePeerDependencies:
       - supports-color
+    dev: true
+
+  /@parallelmarkets/token/0.0.2:
+    resolution: {integrity: sha512-IDs2WKP/zETWNo7LTQABH0eBB7JFzzuCc7rOTh8za8VtgRBNhenSlHk7KKg9o9THFu1kTmmAu5S2rLlGfRFx+A==}
     dev: true
 
   /@protobufjs/aspromise/1.1.2:
