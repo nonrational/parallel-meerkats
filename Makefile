@@ -8,6 +8,9 @@ clean:
 	rm -rf artifacts/*
 	rm -rf cache/*
 
+export-data-json:
+	node --experimental-fetch scripts/export-data-json.js
+
 #  _                 _
 # | | ___   ___ __ _| |
 # | |/ _ \ / __/ _` | |

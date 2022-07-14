@@ -8,8 +8,6 @@ const DESCRIPTION_INDEX = 4
 const IMAGE_URL_INDEX = 5
 
 const writeDataFiles = (rows) => {
-  console.log(rows)
-
   for (var i = 1; i < rows.length; i++) {
     const datum = {
       name: rows[i][NAME_INDEX],
@@ -17,9 +15,7 @@ const writeDataFiles = (rows) => {
       image: rows[i][IMAGE_URL_INDEX],
     }
 
-    const fileName = `data/${rows[i][TOKEN_ID_INDEX]}.json`
-
-    console.log(fileName)
+    const fileName = `docs/data/${rows[i][TOKEN_ID_INDEX]}.json`
     writeFileSync(fileName, JSON.stringify(datum, null, 2) + '\n')
   }
 }
@@ -34,4 +30,6 @@ fetch('https://docs.google.com/spreadsheets/d/e/2PACX-1vQmJKwu96Fk3AlCa7heA4rsqj
       .map((e) => e.split(',').map((e) => e.trim()))
 
     writeDataFiles(data)
+
+    console.log('Done.')
   })
