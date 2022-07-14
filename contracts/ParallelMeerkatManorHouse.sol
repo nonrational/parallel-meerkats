@@ -48,6 +48,10 @@ contract ParallelMeerkatManorHouse is ERC721AQueryableUpgradeable, OwnableUpgrad
         return bytes(baseURI).length != 0 ? string(abi.encodePacked(baseURI, _toString(tokenId), ".json")) : "";
     }
 
+    function contractURI() public pure returns (string memory) {
+        return "https://parallelmeerkats.com/contract.json";
+    }
+
     function hasAnySanctionsSafeIdentityToken(address subject) internal view returns (bool) {
         IParallelID pid = IParallelID(PID_CONTRACT);
 
