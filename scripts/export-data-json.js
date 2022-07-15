@@ -14,7 +14,10 @@ const writeDataFiles = (rows) => {
       name: rows[i][NAME_INDEX],
       description: rows[i][DESCRIPTION_INDEX],
       image: rows[i][IMAGE_URL_INDEX],
-      attributes: [{ trait_type: 'Generation', value: rows[i][GENERATION_INDEX] }],
+      attributes: [
+        { trait_type: 'Generation', value: rows[i][GENERATION_INDEX] },
+        { trait_type: 'Algo', value: 'craiyon.com' },
+      ],
     }
 
     const fileName = `docs/data/${rows[i][TOKEN_ID_INDEX]}.json`
