@@ -6,6 +6,7 @@ const TOKEN_ID_INDEX = 0
 const NAME_INDEX = 3
 const DESCRIPTION_INDEX = 4
 const IMAGE_URL_INDEX = 5
+const GENERATION_INDEX = 6
 
 const writeDataFiles = (rows) => {
   for (var i = 1; i < rows.length; i++) {
@@ -13,9 +14,11 @@ const writeDataFiles = (rows) => {
       name: rows[i][NAME_INDEX],
       description: rows[i][DESCRIPTION_INDEX],
       image: rows[i][IMAGE_URL_INDEX],
+      attributes: [{ trait_type: 'Generation', value: rows[i][GENERATION_INDEX] }],
     }
 
     const fileName = `docs/data/${rows[i][TOKEN_ID_INDEX]}.json`
+
     writeFileSync(fileName, JSON.stringify(datum, null, 2) + '\n')
   }
 }
