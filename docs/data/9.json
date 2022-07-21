@@ -5,7 +5,6 @@
   "attributes": [
     {
       "trait_type": "Generation",
-      "display_type": "number",
       "value": 1
     },
     {
@@ -16,6 +15,11 @@
       "trait_type": "Birthday",
       "display_type": "date",
       "value": 1654063200
+    },
+    {
+      "trait_type": "Last Updated",
+      "display_type": "date",
+      "value": 1658400202
     }
   ]
 }

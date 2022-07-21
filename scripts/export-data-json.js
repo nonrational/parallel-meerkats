@@ -17,9 +17,10 @@ const writeDataFiles = (rows) => {
       description: rows[i][DESCRIPTION_INDEX],
       image: rows[i][IMAGE_URL_INDEX],
       attributes: [
-        { trait_type: 'Generation', display_type: "number", value: parseInt(rows[i][GENERATION_INDEX]) },
+        { trait_type: 'Generation', value: parseInt(rows[i][GENERATION_INDEX]) },
         { trait_type: 'Algo', value: rows[i][ALGO_INDEX] },
-        { trait_type: 'Birthday', display_type: "date", value: parseInt(rows[i][BIRTHDAY_INDEX]) }
+        { trait_type: 'Birthday', display_type: "date", value: parseInt(rows[i][BIRTHDAY_INDEX]) },
+        { trait_type: 'Last Updated', display_type: "date", value: ~~(Date.now() / 1000) }
       ],
     }
 
