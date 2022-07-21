@@ -1,6 +1,6 @@
 {
   "name": "Rounders",
-  "description": "Parallel Meerkat #8",
+  "description": "Parallel Meerkat #8  <br/>Awarded for prowess at the poker table.",
   "image": "https://parallelmeerkats.com/images/8.jpg",
   "attributes": [
     {
@@ -19,7 +19,7 @@
     {
       "trait_type": "Last Updated",
       "display_type": "date",
-      "value": 1658400202
+      "value": 1658400774
     }
   ]
 }

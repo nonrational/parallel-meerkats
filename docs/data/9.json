@@ -1,6 +1,6 @@
 {
   "name": "The Poker King",
-  "description": "Parallel Meerkat #9",
+  "description": "Parallel Meerkat #9  <br/>Awarded for prowess at the poker table.",
   "image": "https://parallelmeerkats.com/images/9.jpg",
   "attributes": [
     {
@@ -19,7 +19,7 @@
     {
       "trait_type": "Last Updated",
       "display_type": "date",
-      "value": 1658400202
+      "value": 1658400774
     }
   ]
 }

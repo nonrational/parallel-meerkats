@@ -1,6 +1,6 @@
 {
   "name": "Zerg Rush",
-  "description": "Parallel Meerkat #10",
+  "description": "Parallel Meerkat #10  <br/>Awarded for prowess at real-time strategy.",
   "image": "https://parallelmeerkats.com/images/10.jpg",
   "attributes": [
     {
@@ -19,7 +19,7 @@
     {
       "trait_type": "Last Updated",
       "display_type": "date",
-      "value": 1658400202
+      "value": 1658400774
     }
   ]
 }
