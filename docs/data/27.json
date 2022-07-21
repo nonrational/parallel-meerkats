@@ -1,7 +1,7 @@
 {
-  "name": "Parallel Meerkat #27",
-  "description": "",
-  "image": "Parallel Meerkat #27<br>",
+  "name": "Rougelike",
+  "description": "Parallel Meerkat #27<br>",
+  "image": "https://parallelmeerkats.com/images/27.jpg",
   "attributes": [
     {
       "trait_type": "Generation",

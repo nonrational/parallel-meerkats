@@ -1,7 +1,7 @@
 {
-  "name": "Parallel Meerkat #4",
-  "description": "",
-  "image": "Parallel Meerkat #4<br>",
+  "name": "Fifth",
+  "description": "Parallel Meerkat #4<br>",
+  "image": "https://parallelmeerkats.com/images/4.jpg",
   "attributes": [
     {
       "trait_type": "Generation",

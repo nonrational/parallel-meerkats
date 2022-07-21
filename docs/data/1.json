@@ -1,7 +1,7 @@
 {
-  "name": "Parallel Meerkat #1",
-  "description": "The first among many.",
-  "image": "Parallel Meerkat #1<br>The first among many.",
+  "name": "Cottage Core",
+  "description": "Parallel Meerkat #1<br>",
+  "image": "https://parallelmeerkats.com/images/1.jpg",
   "attributes": [
     {
       "trait_type": "Generation",

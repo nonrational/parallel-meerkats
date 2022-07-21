@@ -1,7 +1,7 @@
 {
-  "name": "Patience",
-  "description": "Parallel Meerkat #26<br>",
-  "image": "https://parallelmeerkats.com/images/26.jpg",
+  "name": "Parallel Universe",
+  "description": "Parallel Meerkat #0<br>",
+  "image": "https://parallelmeerkats.com/images/0.jpg",
   "attributes": [
     {
       "trait_type": "Generation",
@@ -15,7 +15,7 @@
     {
       "trait_type": "Birthday",
       "display_type": "date",
-      "value": 1658296800
+      "value": 1647842400
     }
   ]
 }

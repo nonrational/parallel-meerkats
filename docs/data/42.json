@@ -1,7 +1,7 @@
 {
-  "name": "Parallel Meerkat #42",
-  "description": "",
-  "image": "Parallel Meerkat #42<br>",
+  "name": "Arthur",
+  "description": "Parallel Meerkat #42<br>",
+  "image": "https://parallelmeerkats.com/images/42.jpg",
   "attributes": [
     {
       "trait_type": "Generation",

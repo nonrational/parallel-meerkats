@@ -1,7 +1,7 @@
 {
-  "name": "Parallel Meerkat #10",
-  "description": "",
-  "image": "Parallel Meerkat #10<br>",
+  "name": "Zerg Rush",
+  "description": "Parallel Meerkat #10<br>",
+  "image": "https://parallelmeerkats.com/images/10.jpg",
   "attributes": [
     {
       "trait_type": "Generation",

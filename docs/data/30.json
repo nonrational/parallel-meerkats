@@ -1,7 +1,7 @@
 {
-  "name": "Parallel Meerkat #30",
-  "description": "",
-  "image": "Parallel Meerkat #30<br>",
+  "name": "Parallax",
+  "description": "Parallel Meerkat #30<br>",
+  "image": "https://parallelmeerkats.com/images/30.jpg",
   "attributes": [
     {
       "trait_type": "Generation",

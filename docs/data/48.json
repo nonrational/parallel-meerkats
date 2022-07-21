@@ -1,7 +1,7 @@
 {
-  "name": "Parallel Meerkat #48",
-  "description": "",
-  "image": "Parallel Meerkat #48<br>",
+  "name": "Beep Beep",
+  "description": "Parallel Meerkat #48<br>",
+  "image": "https://parallelmeerkats.com/images/48.jpg",
   "attributes": [
     {
       "trait_type": "Generation",

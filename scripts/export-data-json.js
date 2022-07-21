@@ -3,9 +3,9 @@
 const { writeFileSync } = require('fs')
 
 const TOKEN_ID_INDEX = 0
-const NAME_INDEX = 3
-const DESCRIPTION_INDEX = 4
-const IMAGE_URL_INDEX = 5
+const NAME_INDEX = 2
+const DESCRIPTION_INDEX = 5
+const IMAGE_URL_INDEX = 6
 const GENERATION_INDEX = 7
 const ALGO_INDEX = 8
 const BIRTHDAY_INDEX = 11
