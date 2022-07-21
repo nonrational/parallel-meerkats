@@ -1,5 +1,21 @@
 {
-  "name": "#41 - Travolta",
+  "name": "Parallel Meerkat #41",
   "description": "",
-  "image": "https://parallelmeerkats.com/images/41.jpg"
+  "image": "Parallel Meerkat #41<br>",
+  "attributes": [
+    {
+      "trait_type": "Generation",
+      "display_type": "number",
+      "value": 1
+    },
+    {
+      "trait_type": "Algo",
+      "value": "craiyon.com"
+    },
+    {
+      "trait_type": "Birthday",
+      "display_type": "date",
+      "value": 1658296800
+    }
+  ]
 }

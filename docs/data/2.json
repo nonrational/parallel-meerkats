@@ -1,5 +1,21 @@
 {
-  "name": "#2 - Abbey Road",
+  "name": "Parallel Meerkat #2",
   "description": "",
-  "image": "https://parallelmeerkats.com/images/2.jpg"
+  "image": "Parallel Meerkat #2<br>",
+  "attributes": [
+    {
+      "trait_type": "Generation",
+      "display_type": "number",
+      "value": 1
+    },
+    {
+      "trait_type": "Algo",
+      "value": "craiyon.com"
+    },
+    {
+      "trait_type": "Birthday",
+      "display_type": "date",
+      "value": 1647842400
+    }
+  ]
 }

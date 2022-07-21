@@ -1,5 +1,21 @@
 {
-  "name": "#31 - P3R-233",
+  "name": "Parallel Meerkat #31",
   "description": "",
-  "image": "https://parallelmeerkats.com/images/31.jpg"
+  "image": "Parallel Meerkat #31<br>",
+  "attributes": [
+    {
+      "trait_type": "Generation",
+      "display_type": "number",
+      "value": 1
+    },
+    {
+      "trait_type": "Algo",
+      "value": "craiyon.com"
+    },
+    {
+      "trait_type": "Birthday",
+      "display_type": "date",
+      "value": 1658296800
+    }
+  ]
 }

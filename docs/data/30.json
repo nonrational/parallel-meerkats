@@ -1,5 +1,21 @@
 {
-  "name": "#30 - Parallax",
+  "name": "Parallel Meerkat #30",
   "description": "",
-  "image": "https://parallelmeerkats.com/images/30.jpg"
+  "image": "Parallel Meerkat #30<br>",
+  "attributes": [
+    {
+      "trait_type": "Generation",
+      "display_type": "number",
+      "value": 1
+    },
+    {
+      "trait_type": "Algo",
+      "value": "craiyon.com"
+    },
+    {
+      "trait_type": "Birthday",
+      "display_type": "date",
+      "value": 1658296800
+    }
+  ]
 }

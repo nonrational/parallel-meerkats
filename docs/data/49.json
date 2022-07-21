@@ -1,5 +1,21 @@
 {
-  "name": "#49 - Alice",
+  "name": "Parallel Meerkat #49",
   "description": "",
-  "image": "https://parallelmeerkats.com/images/49.jpg"
+  "image": "Parallel Meerkat #49<br>",
+  "attributes": [
+    {
+      "trait_type": "Generation",
+      "display_type": "number",
+      "value": 1
+    },
+    {
+      "trait_type": "Algo",
+      "value": "craiyon.com"
+    },
+    {
+      "trait_type": "Birthday",
+      "display_type": "date",
+      "value": 1658296800
+    }
+  ]
 }

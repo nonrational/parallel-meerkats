@@ -1,5 +1,21 @@
 {
-  "name": "#6 - Shadow Moon",
+  "name": "Parallel Meerkat #6",
   "description": "",
-  "image": "https://parallelmeerkats.com/images/6.jpg"
+  "image": "Parallel Meerkat #6<br>",
+  "attributes": [
+    {
+      "trait_type": "Generation",
+      "display_type": "number",
+      "value": 1
+    },
+    {
+      "trait_type": "Algo",
+      "value": "craiyon.com"
+    },
+    {
+      "trait_type": "Birthday",
+      "display_type": "date",
+      "value": 1648188000
+    }
+  ]
 }

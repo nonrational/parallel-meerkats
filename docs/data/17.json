@@ -1,5 +1,21 @@
 {
-  "name": "#17 - Arguably Savvy",
+  "name": "Parallel Meerkat #17",
   "description": "",
-  "image": "https://parallelmeerkats.com/images/17.jpg"
+  "image": "Parallel Meerkat #17<br>",
+  "attributes": [
+    {
+      "trait_type": "Generation",
+      "display_type": "number",
+      "value": 1
+    },
+    {
+      "trait_type": "Algo",
+      "value": "craiyon.com"
+    },
+    {
+      "trait_type": "Birthday",
+      "display_type": "date",
+      "value": 1658296800
+    }
+  ]
 }

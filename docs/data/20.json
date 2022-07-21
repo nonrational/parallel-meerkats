@@ -1,5 +1,21 @@
 {
-  "name": "#20 - Mere Katerpillar",
+  "name": "Parallel Meerkat #20",
   "description": "",
-  "image": "https://parallelmeerkats.com/images/20.jpg"
+  "image": "Parallel Meerkat #20<br>",
+  "attributes": [
+    {
+      "trait_type": "Generation",
+      "display_type": "number",
+      "value": 1
+    },
+    {
+      "trait_type": "Algo",
+      "value": "craiyon.com"
+    },
+    {
+      "trait_type": "Birthday",
+      "display_type": "date",
+      "value": 1658296800
+    }
+  ]
 }

@@ -6,7 +6,9 @@ const TOKEN_ID_INDEX = 0
 const NAME_INDEX = 3
 const DESCRIPTION_INDEX = 4
 const IMAGE_URL_INDEX = 5
-const GENERATION_INDEX = 6
+const GENERATION_INDEX = 7
+const ALGO_INDEX = 8
+const BIRTHDAY_INDEX = 11
 
 const writeDataFiles = (rows) => {
   for (var i = 1; i < rows.length; i++) {
@@ -15,8 +17,9 @@ const writeDataFiles = (rows) => {
       description: rows[i][DESCRIPTION_INDEX],
       image: rows[i][IMAGE_URL_INDEX],
       attributes: [
-        { trait_type: 'Generation', value: rows[i][GENERATION_INDEX] },
-        { trait_type: 'Algo', value: 'craiyon.com' },
+        { trait_type: 'Generation', display_type: "number", value: parseInt(rows[i][GENERATION_INDEX]) },
+        { trait_type: 'Algo', value: rows[i][ALGO_INDEX] },
+        { trait_type: 'Birthday', display_type: "date", value: parseInt(rows[i][BIRTHDAY_INDEX]) }
       ],
     }
 

@@ -1,5 +1,21 @@
 {
-  "name": "#9 - The Poker King",
+  "name": "Parallel Meerkat #9",
   "description": "",
-  "image": "https://parallelmeerkats.com/images/9.jpg"
+  "image": "Parallel Meerkat #9<br>",
+  "attributes": [
+    {
+      "trait_type": "Generation",
+      "display_type": "number",
+      "value": 1
+    },
+    {
+      "trait_type": "Algo",
+      "value": "craiyon.com"
+    },
+    {
+      "trait_type": "Birthday",
+      "display_type": "date",
+      "value": 1654063200
+    }
+  ]
 }

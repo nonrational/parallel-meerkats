@@ -1,5 +1,21 @@
 {
-  "name": "#14 - On Screen",
+  "name": "Parallel Meerkat #14",
   "description": "",
-  "image": "https://parallelmeerkats.com/images/14.jpg"
+  "image": "Parallel Meerkat #14<br>",
+  "attributes": [
+    {
+      "trait_type": "Generation",
+      "display_type": "number",
+      "value": 1
+    },
+    {
+      "trait_type": "Algo",
+      "value": "craiyon.com"
+    },
+    {
+      "trait_type": "Birthday",
+      "display_type": "date",
+      "value": 1658296800
+    }
+  ]
 }

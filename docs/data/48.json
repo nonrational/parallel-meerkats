@@ -1,5 +1,21 @@
 {
-  "name": "#48 - Beep Beep",
+  "name": "Parallel Meerkat #48",
   "description": "",
-  "image": "https://parallelmeerkats.com/images/48.jpg"
+  "image": "Parallel Meerkat #48<br>",
+  "attributes": [
+    {
+      "trait_type": "Generation",
+      "display_type": "number",
+      "value": 1
+    },
+    {
+      "trait_type": "Algo",
+      "value": "craiyon.com"
+    },
+    {
+      "trait_type": "Birthday",
+      "display_type": "date",
+      "value": 1658296800
+    }
+  ]
 }

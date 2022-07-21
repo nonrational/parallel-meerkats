@@ -1,5 +1,21 @@
 {
-  "name": "#1 - Parallel Universe",
-  "description": "",
-  "image": "https://parallelmeerkats.com/images/1.jpg"
+  "name": "Parallel Meerkat #1",
+  "description": "The first among many.",
+  "image": "Parallel Meerkat #1<br>The first among many.",
+  "attributes": [
+    {
+      "trait_type": "Generation",
+      "display_type": "number",
+      "value": 1
+    },
+    {
+      "trait_type": "Algo",
+      "value": "craiyon.com"
+    },
+    {
+      "trait_type": "Birthday",
+      "display_type": "date",
+      "value": 1647842400
+    }
+  ]
 }

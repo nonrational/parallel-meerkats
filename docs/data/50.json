@@ -1,5 +1,21 @@
 {
-  "name": "#50 - Mere Katastrophe",
+  "name": "Parallel Meerkat #50",
   "description": "",
-  "image": "https://parallelmeerkats.com/images/50.jpg"
+  "image": "Parallel Meerkat #50<br>",
+  "attributes": [
+    {
+      "trait_type": "Generation",
+      "display_type": "number",
+      "value": 1
+    },
+    {
+      "trait_type": "Algo",
+      "value": "craiyon.com"
+    },
+    {
+      "trait_type": "Birthday",
+      "display_type": "date",
+      "value": 1658296800
+    }
+  ]
 }

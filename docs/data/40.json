@@ -1,5 +1,21 @@
 {
-  "name": "#40 - Antoinette",
+  "name": "Parallel Meerkat #40",
   "description": "",
-  "image": "https://parallelmeerkats.com/images/40.jpg"
+  "image": "Parallel Meerkat #40<br>",
+  "attributes": [
+    {
+      "trait_type": "Generation",
+      "display_type": "number",
+      "value": 1
+    },
+    {
+      "trait_type": "Algo",
+      "value": "craiyon.com"
+    },
+    {
+      "trait_type": "Birthday",
+      "display_type": "date",
+      "value": 1658296800
+    }
+  ]
 }

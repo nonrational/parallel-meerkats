@@ -1,5 +1,21 @@
 {
-  "name": "#8 - Rounders",
-  "description": "Def Not Art",
-  "image": "https://parallelmeerkats.com/images/8.jpg"
+  "name": "Parallel Meerkat #8",
+  "description": "",
+  "image": "Parallel Meerkat #8<br>",
+  "attributes": [
+    {
+      "trait_type": "Generation",
+      "display_type": "number",
+      "value": 1
+    },
+    {
+      "trait_type": "Algo",
+      "value": "craiyon.com"
+    },
+    {
+      "trait_type": "Birthday",
+      "display_type": "date",
+      "value": 1652853600
+    }
+  ]
 }
