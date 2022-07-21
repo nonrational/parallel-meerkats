@@ -1,6 +1,6 @@
 {
   "name": "Parallel Universe",
-  "description": "Parallel Meerkat #0  <br/>First among equals.",
+  "description": "Parallel Meerkat #0 — First among equals.",
   "image": "https://parallelmeerkats.com/images/0.jpg",
   "attributes": [
     {
@@ -19,7 +19,7 @@
     {
       "trait_type": "Last Updated",
       "display_type": "date",
-      "value": 1658400774
+      "value": 1658401476
     }
   ]
 }

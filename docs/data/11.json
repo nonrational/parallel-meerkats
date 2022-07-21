@@ -1,6 +1,6 @@
 {
   "name": "Many Beans",
-  "description": "Parallel Meerkat #11  <br/>Awarded for prowess at guesstimation.",
+  "description": "Parallel Meerkat #11 — Awarded for prowess at guesstimation.",
   "image": "https://parallelmeerkats.com/images/11.jpg",
   "attributes": [
     {
@@ -19,7 +19,7 @@
     {
       "trait_type": "Last Updated",
       "display_type": "date",
-      "value": 1658400774
+      "value": 1658401476
     }
   ]
 }
