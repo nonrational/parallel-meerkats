@@ -2,6 +2,7 @@
   "name": "Shadow Moon",
   "description": "Parallel Meerkat #6",
   "image": "https://parallelmeerkats.com/images/6.jpg",
+  "external_url": "https://parallelmeerkats.com",
   "attributes": [
     {
       "trait_type": "Generation",
@@ -19,7 +20,7 @@
     {
       "trait_type": "Last Updated",
       "display_type": "date",
-      "value": 1658401476
+      "value": 1658496918
     }
   ]
 }
