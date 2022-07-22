@@ -1,5 +1,5 @@
 {
-  "name": "Merie Katoinette",
+  "name": "Meerie Katoinette",
   "description": "Parallel Meerkat #40",
   "image": "https://parallelmeerkats.com/images/40.jpg",
   "external_url": "https://parallelmeerkats.com",
@@ -20,7 +20,7 @@
     {
       "trait_type": "Last Updated",
       "display_type": "date",
-      "value": 1658499142
+      "value": 1658500930
     }
   ]
 }

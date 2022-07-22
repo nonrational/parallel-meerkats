@@ -1,6 +1,6 @@
 {
   "name": "Le Petit Suricate",
-  "description": "Parallel Meerkat #43",
+  "description": "Parallel Meerkat #43 — «Tous les suricates étaient d'abord des bébés. (Mais peu d'entre elles s'en souviennent).»",
   "image": "https://parallelmeerkats.com/images/43.jpg",
   "external_url": "https://parallelmeerkats.com",
   "attributes": [
@@ -20,7 +20,7 @@
     {
       "trait_type": "Last Updated",
       "display_type": "date",
-      "value": 1658498956
+      "value": 1658499989
     }
   ]
 }

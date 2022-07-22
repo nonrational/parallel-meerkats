@@ -1,5 +1,5 @@
 {
-  "name": "Abbey Road",
+  "name": "Sunny",
   "description": "Parallel Meerkat #2",
   "image": "https://parallelmeerkats.com/images/2.jpg",
   "external_url": "https://parallelmeerkats.com",
@@ -20,7 +20,7 @@
     {
       "trait_type": "Last Updated",
       "display_type": "date",
-      "value": 1658498956
+      "value": 1658500911
     }
   ]
 }
