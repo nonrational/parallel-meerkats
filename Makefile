@@ -68,6 +68,8 @@ rinkeby-verify:
 rinkeby-mint:
 	source .rinkeby.env && pnpm exec hardhat run --network rinkeby scripts/mint.js
 
+rinkeby-gift:
+	source .rinkeby.env && pnpm exec hardhat run --network rinkeby scripts/gift.js
 
 #                  _                  _
 #  _ __ ___   __ _(_)_ __  _ __   ___| |_

@@ -39,6 +39,9 @@ module.exports = {
       },
     },
   },
+  gasReporter: {
+    currency: 'USD',
+  },
   networks: {
     rinkeby: {
       url: process.env.RINKEBY_URL || '',
