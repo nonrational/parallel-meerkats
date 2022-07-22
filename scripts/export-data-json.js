@@ -10,6 +10,7 @@ const GENERATION_INDEX = 7
 const ALGO_INDEX = 8
 const BIRTHDAY_INDEX = 11
 const EXTERNAL_URL_INDEX = 12
+const LAST_MODIFIED_INDEX = 14
 
 const writeDataFiles = (rows) => {
   for (var i = 1; i < rows.length; i++) {
@@ -22,7 +23,7 @@ const writeDataFiles = (rows) => {
         { trait_type: 'Generation', value: parseInt(rows[i][GENERATION_INDEX]) },
         { trait_type: 'Algo', value: rows[i][ALGO_INDEX] },
         { trait_type: 'Birthday', display_type: 'date', value: parseInt(rows[i][BIRTHDAY_INDEX]) },
-        { trait_type: 'Last Updated', display_type: 'date', value: ~~(Date.now() / 1000) },
+        { trait_type: 'Last Updated', display_type: 'date', value: parseInt(rows[i][LAST_MODIFIED_INDEX]) },
       ],
     }
 

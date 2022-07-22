@@ -1,5 +1,5 @@
 {
-  "name": "Citizen",
+  "name": "Citizen Kat",
   "description": "Parallel Meerkat #37",
   "image": "https://parallelmeerkats.com/images/37.jpg",
   "external_url": "https://parallelmeerkats.com",
@@ -20,7 +20,7 @@
     {
       "trait_type": "Last Updated",
       "display_type": "date",
-      "value": 1658496918
+      "value": 1658498956
     }
   ]
 }
