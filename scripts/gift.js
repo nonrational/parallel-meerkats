@@ -44,6 +44,8 @@ async function main() {
   console.log(`Press enter to continue...`)
   await keypress()
 
+  console.log('Gifting...')
+
   const ParallelMeerkatManorHouse = await hre.ethers.getContractFactory('ParallelMeerkatManorHouse')
   const deployment = JSON.parse(fs.readFileSync(process.env.DEPLOY_ADDRESSES_PATH))
   const contract = ParallelMeerkatManorHouse.attach(deployment.proxy)

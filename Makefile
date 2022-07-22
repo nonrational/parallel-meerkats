@@ -90,6 +90,9 @@ mainnet-verify:
 mainnet-mint:
 	source .mainnet.env && pnpm exec hardhat run --network mainnet scripts/mint.js
 
+mainnet-gift:
+	source .mainnet.env && pnpm exec hardhat run --network rinkeby scripts/gift.js
+
 
 # echo ".PHONY: $(egrep -o '^([a-z-]*):' Makefile | tr -d ':' | xargs echo)" | pbcopy
 .PHONY: test compile clean export-data-json local-node local-deploy local-upgrade local-mint goerli-deploy goerli-upgrade goerli-verify goerli-mint rinkeby-deploy rinkeby-upgrade rinkeby-verify rinkeby-mint mainnet-deploy mainnet-upgrade mainnet-verify mainnet-mint
