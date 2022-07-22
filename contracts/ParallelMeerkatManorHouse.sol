@@ -18,7 +18,7 @@ contract ParallelMeerkatManorHouse is ERC721AQueryableUpgradeable, OwnableUpgrad
 
         // rinkeby: 0x0F2255E8aD232c5740879e3B495EA858D93C3016
         // mainnet: 0x9ec6232742b6068ce733645AF16BA277Fa412B0A
-        PID_CONTRACT = 0x0F2255E8aD232c5740879e3B495EA858D93C3016;
+        PID_CONTRACT = 0x9ec6232742b6068ce733645AF16BA277Fa412B0A;
     }
 
     function ownerMint(uint256 quantity) external onlyOwner {

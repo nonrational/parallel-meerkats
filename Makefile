@@ -68,7 +68,30 @@ rinkeby-verify:
 rinkeby-mint:
 	source .rinkeby.env && pnpm exec hardhat run --network rinkeby scripts/mint.js
 
+
+#                  _                  _
+#  _ __ ___   __ _(_)_ __  _ __   ___| |_
+# | '_ ` _ \ / _` | | '_ \| '_ \ / _ \ __|
+# | | | | | | (_| | | | | | | | |  __/ |_
+# |_| |_| |_|\__,_|_|_| |_|_| |_|\___|\__|
+#
+
+mainnet-deploy:
+	source .mainnet.env && pnpm exec hardhat run --network mainnet scripts/deploy.js
+
+mainnet-upgrade:
+	source .mainnet.env && pnpm exec hardhat run --network mainnet scripts/upgrade.js
+
+mainnet-verify:
+	source .mainnet.env && pnpm exec hardhat run --network mainnet scripts/verify.js
+
+mainnet-mint:
+	source .mainnet.env && pnpm exec hardhat run --network mainnet scripts/mint.js
+
+
 # echo ".PHONY: $(egrep -o '^([a-z-]*):' Makefile | tr -d ':' | xargs echo)" | pbcopy
-.PHONY: test compile clean local-node local-deploy local-upgrade local-mint goerli-deploy goerli-upgrade goerli-verify goerli-mint rinkeby-deploy rinkeby-upgrade rinkeby-verify rinkeby-mint
+.PHONY: test compile clean export-data-json local-node local-deploy local-upgrade local-mint goerli-deploy goerli-upgrade goerli-verify goerli-mint rinkeby-deploy rinkeby-upgrade rinkeby-verify rinkeby-mint mainnet-deploy mainnet-upgrade mainnet-verify mainnet-mint
+
+
 
 
