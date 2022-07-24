@@ -1,12 +1,13 @@
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.9;
 
+import "./IParallelMeerkatManorHouse.sol";
 import "@openzeppelin/contracts-upgradeable/access/OwnableUpgradeable.sol";
 import "@parallelmarkets/token/contracts/IParallelID.sol";
 import "erc721a-upgradeable/contracts/extensions/ERC721AQueryableUpgradeable.sol";
 import "erc721a-upgradeable/contracts/ERC721AUpgradeable.sol";
 
-contract ParallelMeerkatManorHouse is ERC721AQueryableUpgradeable, OwnableUpgradeable {
+contract ParallelMeerkatManorHouse is IParallelMeerkatManorHouse, ERC721AQueryableUpgradeable, OwnableUpgradeable {
     address PID_CONTRACT;
 
     // Take note of the initializer modifiers.
@@ -18,7 +19,7 @@ contract ParallelMeerkatManorHouse is ERC721AQueryableUpgradeable, OwnableUpgrad
 
         // rinkeby: 0x0F2255E8aD232c5740879e3B495EA858D93C3016
         // mainnet: 0x9ec6232742b6068ce733645AF16BA277Fa412B0A
-        PID_CONTRACT = 0x9ec6232742b6068ce733645AF16BA277Fa412B0A;
+        PID_CONTRACT = 0x0F2255E8aD232c5740879e3B495EA858D93C3016;
     }
 
     function ownerMint(uint256 quantity) external onlyOwner {
@@ -32,7 +33,7 @@ contract ParallelMeerkatManorHouse is ERC721AQueryableUpgradeable, OwnableUpgrad
 
     function transferFrom(address from,  address to,  uint256 tokenId) public virtual override {
         // Forbid "normal" transfer to an address not known to be sanctions safe.
-        if (!hasAnySanctionsSafeIdentityToken(to)) revert("Transfer forbidden");
+        if (!hasAnySanctionsSafeIdentityToken(to)) revert TransferToNonPIDTokenHolder();
 
         super.transferFrom(from, to, tokenId);
     }
