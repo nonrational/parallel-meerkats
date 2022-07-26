@@ -60,6 +60,7 @@ module.exports = {
     apiKey: {
       rinkeby: process.env.ETHERSCAN_API_KEY || 'NOT VALID',
       goerli: process.env.ETHERSCAN_API_KEY || 'NOT VALID',
+      mainnet: process.env.ETHERSCAN_API_KEY || 'NOT VALID',
     },
   },
   ethernal: {
