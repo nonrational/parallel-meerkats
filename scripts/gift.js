@@ -49,6 +49,8 @@ async function main() {
   const ParallelMeerkatManorHouse = await hre.ethers.getContractFactory('ParallelMeerkatManorHouse')
   const deployment = JSON.parse(fs.readFileSync(process.env.DEPLOY_ADDRESSES_PATH))
   const contract = ParallelMeerkatManorHouse.attach(deployment.proxy)
+  console.log(`Attaching to ${deployment.proxy}...`)
+
   const result = await contract.ownerGift(toAddress, meerkatId)
   console.log(result)
 
