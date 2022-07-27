@@ -1,12 +1,13 @@
 {
   "name": "parallel-meerkats",
-  "version": "0.0.2",
+  "version": "1.0.0",
   "description": "Parallel Meerkats Manor House",
   "main": "index.js",
   "private": true,
   "scripts": {
+    "serve": "http-server docs/",
     "test": "hardhat test",
-    "lint": "eslint ./test hardhat.config.js ./scripts && prettier -l ./test hardhat.config.js ./scripts './contracts/**/*.sol' && pnpm solhint 'contracts/**/*.sol'",
+    "lint": "pnpm solhint 'contracts/**/*.sol'",
     "format": "prettier --write ./test hardhat.config.js ./scripts './contracts/**/*.sol'"
   },
   "license": "MIT",
@@ -26,6 +27,7 @@
     "hardhat": "^2.10.0",
     "hardhat-ethernal": "^1.0.0",
     "hardhat-gas-reporter": "^1.0.8",
+    "http-server": "^14.1.1",
     "prettier": "^2.7.1",
     "prettier-plugin-solidity": "^1.0.0-beta.19",
     "solc": "0.8.9",

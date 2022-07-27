@@ -8,7 +8,7 @@ import "erc721a-upgradeable/contracts/extensions/ERC721AQueryableUpgradeable.sol
 import "erc721a-upgradeable/contracts/ERC721AUpgradeable.sol";
 
 contract ParallelMeerkatManorHouse is IParallelMeerkatManorHouse, ERC721AQueryableUpgradeable, OwnableUpgradeable {
-    address PID_CONTRACT;
+    address public PID_CONTRACT;
 
     // Take note of the initializer modifiers.
     // - `initializerERC721A` for `ERC721AUpgradeable`.

@@ -1,3 +1,6 @@
+serve-http:
+	pnpm serve
+
 test:
 	pnpm test
 
