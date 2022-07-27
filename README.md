@@ -1,5 +1,7 @@
 # Parallel Meerkats
 
+> In the Parallel Meerkats project, NFTs are used to represent meerkats in a parallel universe. In this universe, meerkats are intelligent creatures that can communicate with each other telepathically. The NFTs can be used by the meerkats to store information about their thoughts and experiences.
+
 ```
                       ,'''''-._
                      ;  ,.  <> `-._
@@ -28,14 +30,4 @@ ___,-| |----''    / |         `._`-.          `----
  jrei    `.`-._        _,             ,-     __,-
             `-.`.
    --'         `;
-```
-
-## Quickstart
-
-```shell
-pnpm i
-pnpm test
-
-pnpm exec hardhat run --network <network name> scripts/deploy.js
-pnpm exec hardhat run --network <network name> scripts/mint.js
 ```
