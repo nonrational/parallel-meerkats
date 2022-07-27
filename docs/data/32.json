@@ -1,6 +1,6 @@
 {
   "name": "Reflection",
-  "description": "Parallel Meerkat #32",
+  "description": "Parallel Meerkat #32 — Awarded for participation in a spirited debate",
   "image": "https://parallelmeerkats.com/images/32.jpg",
   "external_url": "https://parallelmeerkats.com",
   "attributes": [
@@ -20,7 +20,7 @@
     {
       "trait_type": "Last Updated",
       "display_type": "date",
-      "value": 1658498956
+      "value": 1658952546
     }
   ]
 }
