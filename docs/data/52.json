@@ -1,26 +1,26 @@
 {
-  "name": "The Inspector",
-  "description": "Parallel Meerkat #7 — Awarded for superior bug-hunting skills.",
-  "image": "https://parallelmeerkats.com/images/7.jpg",
+  "name": "The Gumshoe",
+  "description": "Parallel Meerkat #52",
+  "image": "https://parallelmeerkats.com/images/52.jpg",
   "external_url": "https://parallelmeerkats.com",
   "attributes": [
     {
       "trait_type": "Generation",
-      "value": 1
+      "value": 2
     },
     {
       "trait_type": "Algo",
-      "value": "craiyon.com"
+      "value": "DALL·E"
     },
     {
       "trait_type": "Birthday",
       "display_type": "date",
-      "value": 1650002400
+      "value": 1659506400
     },
     {
       "trait_type": "Last Updated",
       "display_type": "date",
-      "value": 1658498956
+      "value": 1659554802
     }
   ]
 }
