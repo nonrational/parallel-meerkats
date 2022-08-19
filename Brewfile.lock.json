@@ -1,0 +1,29 @@
+{
+  "entries": {
+    "tap": {
+      "1password/tap": {
+        "revision": "99a42bcf70263f8ce2f2517be1ab59bc950a74e9"
+      }
+    },
+    "cask": {
+      "1password-cli": {
+        "version": "2.6.2",
+        "options": {
+          "full_name": "1password-cli"
+        }
+      }
+    }
+  },
+  "system": {
+    "macos": {
+      "monterey": {
+        "HOMEBREW_VERSION": "3.5.9-133-gd4e6925",
+        "HOMEBREW_PREFIX": "/usr/local",
+        "Homebrew/homebrew-core": "8a0cdb7ef67dcd745e170d51afb9288c0c744dce",
+        "CLT": "13.4.0.0.1.1651278267",
+        "Xcode": "13.4.1",
+        "macOS": "12.5.1"
+      }
+    }
+  }
+}
