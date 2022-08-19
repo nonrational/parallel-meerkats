@@ -9,6 +9,11 @@
       "address": "0x6695697D9eC64a4FF71758E1e31e6bd3aEcDbf8A",
       "txHash": "0x67dbcc2f5d371818c5f2fc1db227e6fb59295ec265e0744c6d831f13e8a708ce",
       "kind": "transparent"
+    },
+    {
+      "address": "0x0f45BBd80be18EDD2dF9E7AF7a893977f2Fc0e20",
+      "txHash": "0xf7a2242c60914f95daf5a12511c6f02af8f24c44ca9f94edbfd3a7f3b46ada7f",
+      "kind": "transparent"
     }
   ],
   "impls": {
@@ -140,6 +145,89 @@
             "type": "t_address",
             "contract": "ParallelMeerkatManorHouse",
             "src": "contracts/ParallelMeerkatManorHouse.sol:10"
+          }
+        ],
+        "types": {
+          "t_address": {
+            "label": "address",
+            "numberOfBytes": "20"
+          },
+          "t_array(t_uint256)49_storage": {
+            "label": "uint256[49]",
+            "numberOfBytes": "1568"
+          },
+          "t_array(t_uint256)50_storage": {
+            "label": "uint256[50]",
+            "numberOfBytes": "1600"
+          },
+          "t_bool": {
+            "label": "bool",
+            "numberOfBytes": "1"
+          },
+          "t_uint256": {
+            "label": "uint256",
+            "numberOfBytes": "32"
+          },
+          "t_uint8": {
+            "label": "uint8",
+            "numberOfBytes": "1"
+          }
+        }
+      }
+    },
+    "be79377a43f15dc3b0f9e57f075431ad4f3f6263b54280e45920dc0c07910ba2": {
+      "address": "0x2E74eb0434367F888042ab1d6c78F751292d651A",
+      "txHash": "0x31a04f2b5ce22b856b7e5eb84df48dce1987091360f197264b38d7a7ab1ab3a5",
+      "layout": {
+        "storage": [
+          {
+            "label": "_initialized",
+            "offset": 0,
+            "slot": "0",
+            "type": "t_uint8",
+            "contract": "Initializable",
+            "src": "@openzeppelin/contracts-upgradeable/proxy/utils/Initializable.sol:62",
+            "retypedFrom": "bool"
+          },
+          {
+            "label": "_initializing",
+            "offset": 1,
+            "slot": "0",
+            "type": "t_bool",
+            "contract": "Initializable",
+            "src": "@openzeppelin/contracts-upgradeable/proxy/utils/Initializable.sol:67"
+          },
+          {
+            "label": "__gap",
+            "offset": 0,
+            "slot": "1",
+            "type": "t_array(t_uint256)50_storage",
+            "contract": "ContextUpgradeable",
+            "src": "@openzeppelin/contracts-upgradeable/utils/ContextUpgradeable.sol:36"
+          },
+          {
+            "label": "_owner",
+            "offset": 0,
+            "slot": "51",
+            "type": "t_address",
+            "contract": "OwnableUpgradeable",
+            "src": "@openzeppelin/contracts-upgradeable/access/OwnableUpgradeable.sol:22"
+          },
+          {
+            "label": "__gap",
+            "offset": 0,
+            "slot": "52",
+            "type": "t_array(t_uint256)49_storage",
+            "contract": "OwnableUpgradeable",
+            "src": "@openzeppelin/contracts-upgradeable/access/OwnableUpgradeable.sol:94"
+          },
+          {
+            "label": "PID_CONTRACT",
+            "offset": 0,
+            "slot": "101",
+            "type": "t_address",
+            "contract": "ParallelMeerkatManorHouse",
+            "src": "contracts/ParallelMeerkatManorHouse.sol:11"
           }
         ],
         "types": {

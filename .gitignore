@@ -7,9 +7,5 @@
 /cache
 /artifacts
 
-# env config files
-/.env
-/*.env
-
 # local chain
 /.openzeppelin/unknown-31337.json

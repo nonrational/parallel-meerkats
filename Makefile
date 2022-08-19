@@ -97,7 +97,8 @@ mainnet-gift:
 	source .mainnet.env && pnpm exec hardhat run --network mainnet scripts/gift.js
 
 # echo ".PHONY: $(egrep -o '^([a-z-]*):' Makefile | tr -d ':' | xargs echo)" | pbcopy
-.PHONY: test compile clean export-data-json local-node local-deploy local-upgrade local-mint goerli-deploy goerli-upgrade goerli-verify goerli-mint rinkeby-deploy rinkeby-upgrade rinkeby-verify rinkeby-mint mainnet-deploy mainnet-upgrade mainnet-verify mainnet-mint
+.PHONY: serve-http test compile clean export-data-json local-node local-deploy local-upgrade local-mint goerli-deploy goerli-upgrade goerli-verify goerli-mint rinkeby-deploy rinkeby-upgrade rinkeby-verify rinkeby-mint rinkeby-gift mainnet-deploy mainnet-upgrade mainnet-verify mainnet-mint mainnet-gift
+
 
 
 
