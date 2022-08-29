@@ -1,3 +1,10 @@
+SHELL := bash
+.ONESHELL:
+.SHELLFLAGS := -eu -o pipefail -c
+.DELETE_ON_ERROR:
+MAKEFLAGS += --warn-undefined-variables
+MAKEFLAGS += --no-builtin-rules
+
 serve-http:
 	pnpm serve
 
@@ -13,6 +20,9 @@ clean:
 
 export-data-json:
 	node --experimental-fetch scripts/export-data-json.js
+
+png2jpg:
+	for f in docs/images/*.png; do sips -s format jpeg $$f --out $${f%.*}.jpg && rm $$f; done
 
 #  _                 _
 # | | ___   ___ __ _| |
@@ -98,8 +108,3 @@ mainnet-gift:
 
 # echo ".PHONY: $(egrep -o '^([a-z-]*):' Makefile | tr -d ':' | xargs echo)" | pbcopy
 .PHONY: serve-http test compile clean export-data-json local-node local-deploy local-upgrade local-mint goerli-deploy goerli-upgrade goerli-verify goerli-mint rinkeby-deploy rinkeby-upgrade rinkeby-verify rinkeby-mint rinkeby-gift mainnet-deploy mainnet-upgrade mainnet-verify mainnet-mint mainnet-gift
-
-
-
-
-
