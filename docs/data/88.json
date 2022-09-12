@@ -1,5 +1,5 @@
 {
-  "name": "I Am Become Meerkat",
+  "name": "Becoming",
   "description": "Parallel Meerkat #88 — They told me I could be anything I wanted，so I became a meerkat.",
   "image": "https://parallelmeerkats.com/images/88.jpg",
   "external_url": "https://parallelmeerkats.com",
@@ -20,7 +20,7 @@
     {
       "trait_type": "Last Updated",
       "display_type": "date",
-      "value": 1662993885
+      "value": 1663014125
     }
   ]
 }
