@@ -1,0 +1,26 @@
+{
+  "name": "Prophet",
+  "description": "Parallel Meerkat #56",
+  "image": "https://parallelmeerkats.com/images/56.jpg",
+  "external_url": "https://parallelmeerkats.com",
+  "attributes": [
+    {
+      "trait_type": "Generation",
+      "value": 2
+    },
+    {
+      "trait_type": "Algo",
+      "value": "DALL·E"
+    },
+    {
+      "trait_type": "Birthday",
+      "display_type": "date",
+      "value": 1661407200
+    },
+    {
+      "trait_type": "Last Updated",
+      "display_type": "date",
+      "value": 1662993885
+    }
+  ]
+}

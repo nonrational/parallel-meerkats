@@ -1,0 +1,26 @@
+{
+  "name": "Shine On",
+  "description": "Parallel Meerkat #97",
+  "image": "https://parallelmeerkats.com/images/97.jpg",
+  "external_url": "https://parallelmeerkats.com",
+  "attributes": [
+    {
+      "trait_type": "Generation",
+      "value": 2
+    },
+    {
+      "trait_type": "Algo",
+      "value": "DALL·E"
+    },
+    {
+      "trait_type": "Birthday",
+      "display_type": "date",
+      "value": 1662962400
+    },
+    {
+      "trait_type": "Last Updated",
+      "display_type": "date",
+      "value": 1662993885
+    }
+  ]
+}

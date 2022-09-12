@@ -1,0 +1,26 @@
+{
+  "name": "Token Holder",
+  "description": "Parallel Meerkat #70",
+  "image": "https://parallelmeerkats.com/images/70.jpg",
+  "external_url": "https://parallelmeerkats.com",
+  "attributes": [
+    {
+      "trait_type": "Generation",
+      "value": 2
+    },
+    {
+      "trait_type": "Algo",
+      "value": "DALL·E"
+    },
+    {
+      "trait_type": "Birthday",
+      "display_type": "date",
+      "value": 1662357600
+    },
+    {
+      "trait_type": "Last Updated",
+      "display_type": "date",
+      "value": 1662993885
+    }
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "name": "Meer Chance",
+  "description": "Parallel Meerkat #54",
+  "image": "https://parallelmeerkats.com/images/54.jpg",
+  "external_url": "https://parallelmeerkats.com",
+  "attributes": [
+    {
+      "trait_type": "Generation",
+      "value": 2
+    },
+    {
+      "trait_type": "Algo",
+      "value": "DALL·E"
+    },
+    {
+      "trait_type": "Birthday",
+      "display_type": "date",
+      "value": 1659765600
+    },
+    {
+      "trait_type": "Last Updated",
+      "display_type": "date",
+      "value": 1662993910
+    }
+  ]
+}

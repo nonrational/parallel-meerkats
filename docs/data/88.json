@@ -1,0 +1,26 @@
+{
+  "name": "I Am Become Meerkat",
+  "description": "so I became a meerkat.\"",
+  "image": "\"Parallel Meerkat #88 — They told me I could be anything I wanted",
+  "external_url": "2022-09-10",
+  "attributes": [
+    {
+      "trait_type": "Generation",
+      "value": null
+    },
+    {
+      "trait_type": "Algo",
+      "value": "https://parallelmeerkats.com/images/88.jpg"
+    },
+    {
+      "trait_type": "Birthday",
+      "display_type": "date",
+      "value": null
+    },
+    {
+      "trait_type": "Last Updated",
+      "display_type": "date",
+      "value": null
+    }
+  ]
+}
