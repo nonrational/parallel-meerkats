@@ -1,5 +1,5 @@
 {
-  "name": "Meer Chance",
+  "name": "Mere Chance",
   "description": "Parallel Meerkat #54",
   "image": "https://parallelmeerkats.com/images/54.jpg",
   "external_url": "https://parallelmeerkats.com",
@@ -20,7 +20,7 @@
     {
       "trait_type": "Last Updated",
       "display_type": "date",
-      "value": 1662993910
+      "value": 1663014230
     }
   ]
 }
